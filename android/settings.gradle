@@ -1,0 +1,3 @@
+rootProject.name = 'hawaProject'
+
+include ':app'
