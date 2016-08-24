@@ -10,12 +10,16 @@ class App extends Component {
   renderScene(route, navigator) {
     return routes.renderScene(route, navigator);
   }
-  
+
   render() {
     return (
       <Navigator
-          initialRoute={{name: 'dashboard'}}
-          renderScene={this.renderScene}/> 
+        initialRoute={{name: 'dashboard'}}  
+        renderScene={this.renderScene}
+        configureScene={(route, routeStack) =>
+                  route.config
+                  }
+      />
     )
   }
 }

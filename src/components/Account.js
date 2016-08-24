@@ -2,33 +2,28 @@
  * Author: Pratish Shrestha <pratishshrestha@lftechnology.com>
  * on 8/24/16.
  */
+/**
+ * Author: Pratish Shrestha <pratishshrestha@lftechnology.com>
+ * on 8/24/16.
+ */
 
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, Navigator} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 
-class Profile extends Component {
+class Account extends Component {
   constructor(props) {
     super(props);
     this.goBack = this.goBack.bind(this);
-    this.goToAccount = this.goToAccount.bind(this);
   }
 
   goBack() {
-    this.props.navigator.pop();
-  }
-
-  goToAccount() {
-    this.props.navigator.push({
-      name: 'account',
-      config: Navigator.SceneConfigs.PushFromRight
-    })
+    this.props.navigator.popToTop(0);
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text> This is Profile</Text>
-        <Text onPress={this.goToAccount}>Go to Account</Text>
+        <Text> This is Account </Text>
         <Text onPress={this.goBack}>Back</Text>
       </View>
     )
@@ -40,8 +35,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'green'
+    backgroundColor: 'red'
   }
 });
 
-export default Profile;
+export default Account;

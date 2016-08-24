@@ -4,7 +4,7 @@
  */
 
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, TouchableHighlight} from 'react-native';
+import {Text, View, StyleSheet, TouchableHighlight, Navigator} from 'react-native';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -13,7 +13,8 @@ class Dashboard extends Component {
   }
   goToProfile() {
     this.props.navigator.push({
-      name: 'profile'
+      name: 'profile',
+      config: Navigator.SceneConfigs.PushFromRight
     })
   }
   render() {
