@@ -10,7 +10,7 @@ class App extends Component {
   renderScene(route, navigator) {
     return routes.renderScene(route, navigator);
   }
-
+  
   render() {
     return (
       <Navigator

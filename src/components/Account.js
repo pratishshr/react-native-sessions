@@ -17,7 +17,7 @@ class Account extends Component {
   }
 
   goBack() {
-    this.props.navigator.popToTop(0);
+    this.props.navigator.pop();
   }
 
   render() {

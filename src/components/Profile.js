@@ -13,8 +13,12 @@ class Profile extends Component {
     this.goToAccount = this.goToAccount.bind(this);
   }
 
+  componentDidMount() {
+    alert('You are in profile');
+  }
+
   goBack() {
-    this.props.navigator.pop();
+    this.props.navigator.jumpBack();
   }
 
   goToAccount() {
